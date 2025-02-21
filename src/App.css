@@ -1,0 +1,41 @@
+/* filepath: /c:/Users/EFGH/Desktop/Project1/trial/src/App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.car1 {
+  background-color: rgb(98, 96, 96);
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.navbar{
+
+
+ display:flex;
+  justify-content:space-between; 
+  align-items:center;
+  padding:0 5px;
+  height:70px;
+  background-color: rgba(217, 218, 222, 0.942);
+  
+
+  
+}
+.link11{
+  display:flex;
+  flex-direction: column;
+  gap:1;
+  align-items: center;
+ 
+}
