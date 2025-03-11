@@ -1,0 +1,31 @@
+
+import './App.css'
+import NavBar from './component/NavBar'
+
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Explore from './pages/Explore'
+import Appointment from './pages/Appointment'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Rent from './pages/Rent'
+import Login from './pages/Login'
+const App = () => {
+  return (
+    <>
+    <NavBar /> 
+   <Routes>
+    <Route path='/' element={<Home />}/>
+    <Route path='/explore' element={<Explore />}/>
+    <Route path='/Rent' element={<Rent />}/>
+    <Route path='/appointment' element={<Appointment />}/>
+    <Route path='/about' element={<About />}/>
+    <Route path='/contact' element={<Contact />}/>
+    <Route path='/login' element={<Login />}/>
+    </Routes>
+   
+    </>
+  )
+}
+
+export default App
