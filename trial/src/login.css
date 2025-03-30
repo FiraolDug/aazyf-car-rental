@@ -45,4 +45,5 @@ body{
 }
 .txtparagraph{
     color:blue;
+    cursor:pointer;
 }
