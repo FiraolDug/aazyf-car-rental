@@ -1,0 +1,28 @@
+
+.listDiv{
+
+    position:absolute;
+    top:100px;
+    left:500px;
+    
+}
+.detailDiv{
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    padding-top:20px;
+    width:700px;
+  
+}
+
+.imgArea{
+
+    width:100px;
+  
+}
+.removeBtn{
+
+    cursor: pointer;
+ 
+}

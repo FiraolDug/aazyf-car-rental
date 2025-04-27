@@ -1,0 +1,24 @@
+/* filepath: /c:/Users/EFGH/Desktop/Project1/trial/src/App.css */
+html, body {
+
+  margin: 0;
+  padding: 0;
+  height: full;
+  width: 100%;
+  background-color: #fcac93fd;
+}
+.car1 {
+
+  background-color: rgb(97, 98, 96);
+  height: 100%;
+  width: 100%;
+
+}
+
+canvas {
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}

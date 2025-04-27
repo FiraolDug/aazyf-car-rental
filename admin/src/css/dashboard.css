@@ -1,0 +1,81 @@
+
+.sideBar{
+    width:330px;
+    height:100vh;
+    background-color: rgb(158, 248, 191);
+    box-shadow:1px;
+    border-right:1px solid;
+    padding:15px;
+    padding-top:70px;
+    
+}
+.sideBarShrink{
+    width:20px;
+}
+.board{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.adminImg{
+    width:120px;
+    height:120px;
+    margin-left:10px;
+}
+.backImg{
+    width:30px;
+    height:30px;
+    margin-left:10px;
+    cursor: pointer;
+}
+.dashboard{
+    display:flex;
+    flex-direction: row;
+    width:280px;
+    height:40px;
+    padding:20px;
+    background-color: rgb(253, 255, 255);
+    border-radius:10px;
+    opacity:0.9;
+    cursor:pointer;
+    margin-top:20px;
+
+ 
+}
+.navlink{
+    text-decoration: none;
+    color:black;
+}
+.dashboardTxt{
+    font-size:16px;
+    margin-left:20px;
+
+}
+a.active .dashboard{
+   
+    
+    background-color:  rgb(205, 253, 252);
+
+}
+.navBarDiv{
+    position:fixed;
+    width:100%;
+    height:50px;
+    background-color:rgb(9, 44, 73);
+    z-index:100;
+    opacity:0.7;
+ 
+    
+}
+.logoutBtn{
+    margin-left:1350px;
+    border-radius: 10px;
+    width:100px;
+    height:40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    z-index:100;
+    opacity:1;
+ 
+}

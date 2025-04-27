@@ -1,0 +1,151 @@
+.inventoryDiv{
+   display:flex;
+   position: absolute;
+   left:400px;
+   top:70px;
+   justify-content: space-between;
+    width:700px;
+
+   
+  
+ 
+}
+.fileDiv{
+    display: flex;
+    flex-direction:column;
+
+}
+.formDiv{
+    padding:20px;
+    padding-left:100px;
+}
+.imgArea{
+    width:300px;
+}
+.threeArea{
+    width:150px;
+   
+}
+.uploadTxt{
+  
+    padding-top:50px;
+}
+.modelInput{
+    width:500px;
+    height: 40px;
+    outline: none;
+    border-radius:5px;
+    border:2px solid rgb(190, 189, 189);
+    padding-left:20px;
+    box-shadow: 0 0 5px rgb(114, 114, 114);
+}
+.modelInput:focus{
+    border:2px solid rgb(122, 181, 248);
+  
+}
+.pricePlate{
+    padding-top:20px;
+    display:flex;
+
+}
+.priceDiv{
+    display:flex;
+    flex-direction:column;
+}
+.plateDiv{
+    display:flex;
+    flex-direction:column;
+    padding-left:30px;
+}
+.plateInput{
+    height:40px;
+    outline: none;
+    border-radius:5px;
+    border:2px solid rgb(190, 189, 189);
+    padding-left:20px;
+    box-shadow: 0 0 5px rgb(114, 114, 114);
+    width:300px;
+
+}
+.priceInput{
+    height:40px;
+    outline: none;
+    border-radius:5px;
+    border:2px solid rgb(190, 189, 189);
+    padding-left:20px;
+    box-shadow: 0 0 5px rgb(114, 114, 114);
+    
+}
+.plateInput:focus{
+    border:2px solid rgb(122, 181, 248);
+}
+.priceInput:focus{
+    border:2px solid rgb(122, 181, 248);
+}
+.typeSelect{
+    width:130px;
+    padding-left:10px;
+    padding-right:20px;
+    height:40px;
+    outline:none;
+    border-radius:5px;
+    border:2px solid rgb(190, 189, 189);
+    box-shadow: 0 0 5px rgb(114, 114, 114);
+    cursor: pointer;
+}
+.typeSelect:focus{
+    border:2px solid rgb(122, 181, 248);
+   
+}
+.typeSubTypeDiv{
+    display:flex;
+    padding-top:20px;
+
+}
+.subTypeSelect{
+    width:130px;
+    padding-left:10px;
+    padding-right:20px;
+    height:40px;
+    outline:none;
+    border-radius:5px;
+    border:2px solid rgb(190, 189, 189);
+    box-shadow: 0 0 5px rgb(114, 114, 114);
+    cursor: pointer;
+}
+.subTypeSelect:focus{
+    border:2px solid rgb(122, 181, 248);
+}
+.subTypeDiv{
+    padding-left:30px;
+}
+.descriptionDiv{
+   
+    padding-top:20px;
+  
+}
+.descriptionDiv:focus{
+    border:2px solid rgb(122, 181, 248);
+}
+.textarea{
+    padding:10px;
+    width:520px;
+    height:150px;
+    outline:none;
+    border-radius:5px;
+    border:2px solid rgb(190, 189, 189);
+    box-shadow: 0 0 5px rgb(114, 114, 114);
+}
+.textarea:focus{
+    border:2px solid rgb(122, 181, 248);
+}
+.submitBtn{
+    margin-top:30px;
+    margin-left:350px;
+    width:170px;
+    height:60px;
+    background-color: rgb(28, 28, 29);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
