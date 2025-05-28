@@ -34,8 +34,6 @@ const Appointment = () => {
         </div>
         </div>
         <button className='submitButton'>Submit</button>
-
-
       </div>
 
       </div>

@@ -39,8 +39,6 @@ const Rent = () => {
 
       for(const items in cartItems)
       {
-  
-     
           if(cartItems[items]>0)
           {
           const itemInfo=structuredClone(cars.find(car=>car._id===items))
@@ -61,17 +59,25 @@ const Rent = () => {
         {
           const responseStripe=await axios.post(backendUrl+'/api/payment/stripe',orderData,{headers:{token}})
           if(responseStripe.data.sucess){
-              const {session_url}=responseStripe.data
-             window.location.replace(session_url)}
+            const {session_url}=responseStripe.data
+            window.location.replace(session_url)}
            else{
              toast.error(responseStripe.data.message)
            }
-
           break
         }
-      case 'chapa':{
-        break
-      }
+
+       case 'chapa': {
+          const responseChapa = await axios.post(`${backendUrl}/api/payment/chapa`, orderData, {
+    headers: { token }
+  });
+  if (responseChapa.data.success) {
+    window.location.replace(responseChapa.data.checkout_url);
+  } else {
+    toast.error(responseChapa.data.message);
+  }
+  break;
+}
       default:{
         break
       }
@@ -85,10 +91,6 @@ const Rent = () => {
       
 
   }
-
-
-  
-
 
   return (
     <form onSubmit={onSubmitHandler} className='rentDiv'>
@@ -166,4 +168,4 @@ const Rent = () => {
   )
 }
 
-export default Rent
+export default Rent;
