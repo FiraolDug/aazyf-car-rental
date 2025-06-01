@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../cart.css'
+import '../css/cart.css'
 import { Context } from '../context/context'
 import { icon } from '../assets/asset'
 import CartTotal from '../component/CartTotal'
+import Footer from '../component/Footer'
 
 const Cart = () => {
 
@@ -31,8 +32,9 @@ const Cart = () => {
   },[cartItems,setCartTotal,cars])
 
   return (
+    <>
     <div className='shopCart'>
-      <h2>Shopping Cart</h2>
+      <h2 className='cartTxt1'>Shopping Cart</h2>
     <div className='divCart'>
     <div className='cartItem'>
       {
@@ -57,13 +59,15 @@ const Cart = () => {
 })}
           </div>
          
-          <h2>Cart Total:{currency}{<CartTotal data={cartData} />}</h2>
+          <h2 className='cartTxt2'>Cart Total:{currency}{<CartTotal data={cartData} />}</h2>
           <Link to='/rent'>
           <button className='rentBtn'>Rent Now</button>
           </Link>
      </div>
    
     </div>
+    <Footer />
+    </>
   )
 }
 

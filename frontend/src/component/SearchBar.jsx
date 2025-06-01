@@ -1,5 +1,5 @@
 
-import '../search.css'
+import '../css/search.css'
 import {icon} from '../assets/asset'
 import { useContext, useEffect,useState } from 'react'
 import { Context } from '../context/context'

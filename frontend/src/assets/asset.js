@@ -1,9 +1,9 @@
-import cart from './cart.png'
-import search from './search.png'
-import user from './user.png'
-import logo from './car (1).png'
-import menu from './list.png'
-import back from './back.png'
+import cart from './img/cart.png'
+import search from './img/search.png'
+import user from './img/user.png'
+import logo from './img/car (1).png'
+import menu from './img/list.png'
+import back from './img/back.png'
 import p1 from './img/2020 Hyundai ix25 - 2022 Hyundai Creta.jpg'
 import p2 from './img/01-2012-mercedes-cls-63-amg.jpg'
 import p3 from './img/2010 Land Rover Range Rover Supercharged.jpg'
@@ -22,14 +22,32 @@ import p15 from './img/ram.jpg'
 import p16 from './img/Skoda Superb.jpg'
 import p17 from './img/Suzuki Ertiga.jpg'
 import p18 from './img/Toyota Hilux.jpg'
-import close from './close.png'
-import view from './3d-model.png'
-import stripe from './stripe_logo.png'
-import chapa from './banner-772x250.png'
-import backgroundImg from './rent.jpeg'
+import close from './img/close.png'
+import view from './img/3d-model.png'
+import stripe from './img/stripe_logo.png'
+import chapa from './img/banner-772x250.png'
+import backgroundImg from './img/rent.jpeg'
+import chatbot from './img/chatbot (1).png'
+import message from './img/chatbot.png'
+import send from './img/paper-plane.png'
+import closeChatbot from'./img/close (1).png'
+import chapa2 from './img/download (3).jpg'
+import stripe2 from './img/download (2).jpg'
+import three from './img/3d-model (4).png'
+import rotate from './img/360-degrees.png'
+import zoom from './img/zoom-in.png'
+import ar from './img/augmented-reality.png'
+import drop from './img/arrow.png'
+import right from './img/right-click (1).png'
+import left from './img/left-click.png'
+import scroll from './img/click.png'
+
+import about from './img/aboutPage.jpg'
 const glb={
   file:'/glb/ram.glb',
-  flie1:'/3dmodels/nissan1.glb'
+  flie1:'/3dmodels/nissan1.glb',
+  file2:'/glb/carAnimate.glb',
+  file3:'/glb/chatbot.glb'
 }
 export const icon={
     cart,
@@ -43,7 +61,22 @@ export const icon={
     backgroundImg,
     glb,
     chapa,
-    stripe
+    stripe,
+    chapa2,
+    stripe2,
+    chatbot,
+    message,
+    send,
+    closeChatbot,
+    three,
+    zoom,
+    ar,
+    rotate,
+    drop,
+    left,
+    right,
+    scroll,
+    about
 }
 export const cars1 = [
     {

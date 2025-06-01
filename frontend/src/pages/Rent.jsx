@@ -1,12 +1,13 @@
 import { useContext, useState} from 'react'
-import '../rent.css'
+import '../css/rent.css'
 import { Context } from '../context/context'
 import CartTotal from '../component/CartTotal'
 import { icon } from '../assets/asset'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import Footer from '../component/Footer'
 const Rent = () => {
-  const {cars,cartTotal,currency,discount,showDiscount,cartItems,setCartItems,backendUrl,token}=useContext(Context);
+  const {cars,cartTotal,currency,discount,showDiscount,cartItems,backendUrl,token}=useContext(Context);
   const [method,setMethod]=useState('')
   const [formData,setFormData]=useState({
     firstName:'',
@@ -60,7 +61,7 @@ const Rent = () => {
       case 'stripe':
         {
           const responseStripe=await axios.post(backendUrl+'/api/payment/stripe',orderData,{headers:{token}})
-          if(responseStripe.data.sucess){
+          if(responseStripe.data.success){
               const {session_url}=responseStripe.data
              window.location.replace(session_url)}
            else{
@@ -69,9 +70,18 @@ const Rent = () => {
 
           break
         }
-      case 'chapa':{
-        break
-      }
+      case 'chapa': {
+          const responseChapa = await axios.post(backendUrl+'/api/payment/chapa', orderData, {
+    headers: { token }
+  });
+  if (responseChapa.data.success) {
+    window.location.replace(responseChapa.data.session_url);
+   
+  } else {
+    toast.error('error');
+  }
+  break;
+}
       default:{
         break
       }
@@ -91,6 +101,7 @@ const Rent = () => {
 
 
   return (
+    <>
     <form onSubmit={onSubmitHandler} className='rentDiv'>
       <div className='infoDiv'>
         <div className='rentInfo'>
@@ -151,18 +162,19 @@ const Rent = () => {
         <div>
         <h1>Payment Method</h1>
         <div className='paymentMethodDiv'>
-          <div onClick={()=>setMethod('stripe')} className='stripeDiv' >
-            <img className='stripeImg' src={icon.stripe} />
-
-          </div>
-          <div onClick={()=>setMethod('chapa')} className='chapaDiv'>
-          <img className='chapaImg' src={icon.chapa} />
-            </div>
+        <div onClick={()=>setMethod('stripe')} className={`${method==='stripe'?'stripeActive':'stripeDiv'}`} >
+        <img className='stripeImg' src={icon.stripe} />
+        </div>
+        <div onClick={()=>setMethod('chapa')} className={`${method==='chapa'?'chapaActive':'chapaDiv'}`}>
+        <img className='chapaImg' src={icon.chapa} />
+        </div>
         </div>
         <button className='submitBtn'>Pay</button>
         </div>
         </div>
-    </form>
+        </form>
+       <Footer/>
+       </>
   )
 }
 

@@ -1,10 +1,11 @@
 import axios from 'axios'
-import React, {  useEffect, useState } from 'react'
+import React, {  useContext, useEffect} from 'react'
 import { toast } from 'react-toastify'
 import { backend } from '../App'
 import '../css/list.css'
+import { Context } from '../context/context'
 const List = () => {
-    const [list,setLists]=useState([])
+    const {list,setLists}=useContext(Context)
     const fetchData=async ()=>{
         try{    
             const response=await axios.get(backend+'/api/car/list')
@@ -45,14 +46,14 @@ const List = () => {
     },[])
   return (
     <div className='listDiv'>
-        <p>Uploaded Products</p>
+        <p className='listTxt'>Uploaded Products</p>
         
         <div className='detailDiv '>
-            <b>Image</b>
-            <b>Model</b>
-            <b>LicencePlate</b>
-            <b>Price</b>
-            <b>remove</b>
+            <b className='detailTxt'>Image</b>
+            <b className='detailTxt'>Model</b>
+            <b className='detailTxt'>LicencePlate</b>
+            <b className='detailTxt'>Price</b>
+            <b className='detailTxt'>remove</b>
        </div>
 
        {

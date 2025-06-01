@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+
 export const Context=new createContext()
 const ContextProvider = (props) => {
   const [search,setSearch]=useState()
@@ -15,6 +16,7 @@ const ContextProvider = (props) => {
   const [upload,setUpload]=useState([])
   const [cars,setCars]=useState([])
   const [token,setToken]=useState('')
+  const [orderData,setOrderData]=useState([])
   const navigate=useNavigate()
   const currency='$';
   const discount=10;
@@ -172,7 +174,9 @@ const ContextProvider = (props) => {
         setUpload,
         navigate,
         token,
-        setToken
+        setToken,
+        orderData,
+        setOrderData
  
 
     }

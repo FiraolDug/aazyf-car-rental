@@ -1,0 +1,77 @@
+
+.footerDiv{
+   
+    background-color:rgb(36, 36, 36);
+    padding:100px;
+    margin-top:70px;
+   margin-bottom:0px;
+    width:100%;
+    height:500px;
+    color:white;
+   
+
+
+
+}
+.homeFooter{
+    background-color:rgb(36, 36, 36);
+    color:white;
+     padding:100px;
+     margin-top:440vh;
+   margin-bottom:0px;
+    width:100%;
+    height:500px;
+}
+.footer{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.headTxt{
+    font-size:24px;
+    margin-bottom:60px;
+}
+.companyTxt{
+    width:400px;
+    font-size:18px;
+}
+.linkTxt{
+    text-decoration: none;
+    font-size:20px;
+    margin-top:20px;
+    color:rgb(112, 205, 245);
+}
+.copyDiv{
+    margin-top:200px;
+}
+.contact{
+    font-size:18px;
+}
+@media (max-width:800px){
+     .homeFooter{
+    
+    height:100%;
+    margin-top:500vh;
+    }
+    .footerDiv{
+    
+    height:100%;
+    }
+    .footer{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    
+}
+}
+@media (min-width:800px) and (max-width:1140px){
+    .homeFooter{
+    
+
+    margin-top:480vh;
+    }
+    .footer{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+}

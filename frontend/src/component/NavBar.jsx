@@ -1,6 +1,6 @@
 
 
-import '../Nav.css'
+import '../css/Nav.css'
 import {icon} from '../assets/asset'
 import { NavLink, Link } from 'react-router-dom';
 import {useContext, useState} from 'react'
@@ -57,14 +57,15 @@ const NavBar = () => {
       <img src={icon.cart} className='cartImg' />
       <p className='count'>{getCount()}</p>
       </Link>
-
+    
 
 
 
       <div className='profileDiv'>
+  <img onClick={()=>{token?null:navigate('/login')}}  className='user' src={icon.user}/>
 
      
-      <img onClick={()=>{token?null:navigate('/login')}}  className='user' src={icon.user}/>
+      
   
       {    
        token &&

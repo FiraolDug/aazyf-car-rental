@@ -1,0 +1,165 @@
+.heroDiv{ 
+  display:flex;
+    position:absolute;
+    background-color: rgba(252, 155, 125, 0.942);
+    width:100%;
+    height:600px;
+  
+  }
+  .content{
+    position:relative;
+ 
+    width:600px;
+    height:300px;
+    padding:20px;
+    text-align:left;
+    margin:120px  70px;
+  }
+  .carView{
+
+     width:650px;
+    height:550px;
+   
+
+  }
+  .canvasView{
+    margin-top:10px;
+    width:300px;
+    height:100px;
+ 
+  
+
+  
+   
+  }
+  .heroHeading{
+
+font-size:50px;
+
+margin-left:60px;
+  }
+  .firstHead{
+  color:white;
+  }
+  .secondHead{
+    color:rgb(244, 53, 53);
+    margin-top:-20px;
+  }
+  .heroTxt{
+color:white;
+font-Size:20px;
+margin-left:70px;
+  }
+  .headerSpan{
+    color:rgb(25, 130, 250);
+  }
+  .heroButton{
+    margin-top:30px;
+    width:150px;
+    height:50px;
+    margin-left:50px;
+    border-radius: 10px;
+    border:1px white;
+    font-size: 18px;
+  }
+  .start{
+      background-color: black;
+       color:white;
+  }
+  .explore{
+    background-color: white;
+    color:black;
+  }
+  .heroButton:hover{
+    cursor: pointer;
+  }
+  .start:hover{
+    background-color: rgb(203, 201, 201);
+ 
+    color:black;
+  }
+  .explore:hover{
+    background-color: rgb(28, 27, 27);
+   
+    color:white;
+  }
+ 
+  @media screen and (max-width:500px){
+    .heroDiv{
+      display:block;
+    }
+    .content{
+      font-size:15px;
+      margin-left:0px;
+    }
+   
+    .heroHeading{
+    font-size:30px;
+    margin-left:50px;
+  
+    }
+    .heroTxt{
+      font-size:18px;
+      width:450px;
+      margin-left:50px;
+      
+  
+    }
+    .heroButton{
+      width:140px;
+      height:40px;
+      font-size:12px;
+
+    }
+    .carView{
+      display:none;
+    }
+
+  }
+
+  @media screen and (max-width:1000px){
+     .carView{
+      display:none;
+    }
+     .content{
+      font-size:26px;
+      margin-left:0px;
+    }
+  }
+
+  @media screen and (max-width:1311px){
+     .heroDiv{
+      display:flex;
+      
+    
+    }
+    .content{
+      font-size:18px;
+      margin-left:10px;
+    }
+    .carView{
+      margin-top:100px;
+      margin-left:-100px;
+      width:500px;
+      height:400px;
+   
+     
+    }
+    .heroHeading{
+    font-size:30px;
+    margin-left:50px;
+  
+    }
+    .heroTxt{
+      font-size:18px;
+      width:450px;
+  
+    }
+    .heroButton{
+      width:140px;
+      height:40px;
+      font-size:12px;
+
+    }
+  }
+  

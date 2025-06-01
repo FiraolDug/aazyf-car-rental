@@ -1,23 +1,27 @@
 import {Link} from 'react-router-dom'
 import {useContext} from 'react'
 import {Context} from '../context/context'
-import '../carItem.css'
+import '../css/carItem.css'
 import PropTypes from 'prop-types'
 const CarItem = ({id,name,image,price}) => {
     const {currency}=useContext(Context)
+
   return (
     <>
-<Link to={`/car/${id}`} className='carLink'>
-<div className='priceDiv'>
-        <p className='carText2'>{currency} {price}</p>
+      <Link to={`/car/${id}`} className='carLink'>
+
+        <div className='priceDiv'>
+          <p className='carText2'>{currency} {price}</p>
         </div>
-<img  className="carImg" src={image[0]} alt="" />
-     
+
+        <img  className="carImg" src={image[0]} alt="test img" />
         <p className='carText1'>{name}</p>
     
-</Link>
-</>
-  )
+      </Link>
+    </>
+        )
+
+
 }
 CarItem.propTypes = {
   id: PropTypes.string.isRequired,

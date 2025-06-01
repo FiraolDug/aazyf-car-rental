@@ -72,7 +72,7 @@ const Inventory = () => {
 
                   <div className='priceDiv'>
                   <p className='priceTxt'>Price</p>
-                  <input  onChange={(e)=>setPrice(e.target.value)} className='priceInput' required type='number' placeholder='> 18' />
+                  <input  onChange={(e)=>setPrice(e.target.value)} className='priceInput' required type='number' placeholder='enter the price' />
                  </div>
 
 

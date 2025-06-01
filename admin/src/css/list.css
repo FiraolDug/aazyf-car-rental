@@ -1,18 +1,16 @@
 
-.listDiv{
 
-    position:absolute;
-    top:100px;
-    left:500px;
-    
-}
 .detailDiv{
 
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 20px;
     padding-top:20px;
-    width:700px;
+    padding-left:50px;
+    padding-bottom:10px;
+    width:650px;
+    background-color: white;
+    border-radius:5px;
   
 }
 
@@ -22,7 +20,45 @@
   
 }
 .removeBtn{
-
+    
     cursor: pointer;
+    background-color:rgb(98, 96, 96);
+    border-radius:50%;
+    padding-top:10px;
+    width:40px;
+    height:30px;
+    text-align: center;
+    color:white;
  
+}
+.removeBtn:hover{
+    background-color: red;
+}
+.listTxt{
+    font-size:24px;
+    color:rgb(166, 166, 235);
+}
+.detailTxt{
+    color:rgb(136, 251, 124);
+    font-size:18px;
+}
+.ordersTxt{
+    color:rgb(136, 251, 124);
+    font-size:18px;
+  
+}
+.orderPayment{
+    margin-left:200px;
+}
+.orderPay{
+    margin-left:100px;
+}
+.orderResult{
+    margin-left:130px;
+}
+.orderItems{
+    margin-left:150px;
+}
+.customerName{
+    width:200px;
 }

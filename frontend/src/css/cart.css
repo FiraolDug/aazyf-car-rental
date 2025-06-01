@@ -1,0 +1,96 @@
+.shopCart{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    padding-left:250px;
+    
+
+}
+.divCart{
+   background-color: white;
+    z-index:4;
+    border-radius: 10px;
+    min-height:100px;
+    max-width:65%;
+   padding:20px;
+;
+}
+.cartItem{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgb(241, 240, 240);
+    border-radius: 10px;
+    padding:30px;
+    min-height:300px;
+}
+.cartImage{
+    width:140px;
+    height:150px;
+}
+.cartElement{
+    text-align: start;
+}
+.modelName{
+    color:rgb(124, 124, 244);
+}
+span{
+    color: rgb(4s2, 250, 153);
+}
+.quantity{
+    color:brown;
+}
+.closeDiv{
+    position:relative;
+    top:-155px;
+    left:120px;
+    background-color: rgb(158, 157, 157);
+    width:20px;
+   
+}
+.cartClose{
+
+    width:20px;
+
+}
+.cartClose:hover{
+    cursor:pointer;
+}
+.rentBtn{
+    width:180px;
+    height:50px;
+    background-color: rgb(9, 9, 9);
+    cursor: pointer;
+    color:white;
+    border-radius:5px;
+    margin-left:73%;
+}
+@media (max-width:520px){
+    .cartTxt1{
+        margin-left:-200px;
+    }
+    .divCart{
+      
+         max-width:370px;
+        margin-left:-190px;
+    }
+      .rentBtn{
+        margin-left:0px;
+    }
+    
+}
+@media (min-width:520px) and  (max-width:1131px){
+    .cartTxt1{
+        margin-left: -200px;
+    }
+    .cartTxt2{
+        margin-left:10px;
+    }
+    .divCart{
+     
+       max-width:400px;
+       margin-left:-200px;
+    }
+    .rentBtn{
+        margin-left:53%;
+    }
+}

@@ -1,7 +1,8 @@
-import '../explor.css'
+import '../css/explor.css'
 import { useContext,useState,useEffect, useCallback } from 'react'
 import {Context} from '../context/context'
 import CarItem from '../component/carItem.jsx'
+import Footer from '../component/Footer.jsx'
 const Explore = () => {
 
 
@@ -43,7 +44,12 @@ const Explore = () => {
   const applyFilter=useCallback(()=>{
    let car=cars.slice()
    if(search){
+
+
     car=car.filter((item)=>item.model.toLowerCase().includes(search.toLowerCase()))}
+
+
+
    if(category.length>0){
    car=car.filter((item)=>category.includes(item.type))
    }
@@ -58,17 +64,23 @@ const Explore = () => {
     let car=cars.slice()
     switch(sort){
       case 'low-high':
+      // Sorting cars by ascending price
        setFilter(car.sort((a,b)=>a.price-b.price))
         break
       case 'high-low':
+         // Sorting cars by descending price
          setFilter(car.sort((a,b)=>b.price-a.price))
          break
       default:
+        // Apply default filter if no sorting is selected
         applyFilter()
         break
     }
 
   },[cars,sort,applyFilter])
+
+
+
 useEffect(()=>{
 applySort()
 },[applySort])
@@ -77,6 +89,7 @@ useEffect(()=>{
 },[applyFilter])
 
   return (
+    <>
     <div className='explorDiv'>
       <div className='filterBox'>
       <p className='titleText'>Filter</p>
@@ -134,6 +147,9 @@ useEffect(()=>{
       </div>
       </div>
     </div>
+
+    <Footer />
+    </>
   )
 }
 

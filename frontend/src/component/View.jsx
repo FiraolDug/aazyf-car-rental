@@ -1,32 +1,62 @@
-import {Canvas, useLoader } from '@react-three/fiber'
-import {OrbitControls,PerspectiveCamera, useGLTF} from '@react-three/drei'
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
-import { useContext} from 'react'
-import { Context } from '../context/context'
-import '../view.css'
+import {Canvas} from '@react-three/fiber'
+import { icon } from '../assets/asset'
+import {Perf} from 'r3f-perf'
+import {Leva} from 'leva'
+import '../css/view.css'
+import Auto from './Auto'
+import { useState } from 'react'
+
+
 const View = () => {
-  const {productItem}=useContext(Context)
+  
+  const [visible,setVisible]=useState(true)
 
-
-
-  const load=useGLTF(productItem.gltfFile[0])
-
+  const change=()=>{
+    if(visible===true){
+      setVisible(false)
+    }
+    else{
+      setVisible(true)
+    }
+  }
 
 
   return (
+    <>
+    <div className='guideDiv'>
+     <img onClick={change} className='dropImg' src={icon.drop} /> 
+    <h2 className='guideTxt'> Guide</h2>
+    </div>
+    {
+      visible?
+    <div className='guide'>
+      <h3> press interact to start </h3>
+      <div className='guideDetail'>
+        <p>Zoom </p>
+        <img src={icon.scroll} />
+      </div>
+      <div className='guideDetail'>
+        <p>Rotate</p>
+        <img src={icon.left} />
+      </div>
+      <div className='guideDetail'>
+        <p>Move </p>
+        <img src={icon.right} />
+      </div>
 
+    </div>:null
+}
+      <Leva  />
+     
+      
       <Canvas className='canvas'>
-       
-        <OrbitControls />
-        <PerspectiveCamera makeDefault position={[0,3,6]}  />
-        <ambientLight intensity={1} />
-        <directionalLight intensity={8} />
-     
-          <primitive object={load.scene}  scale={100} rotation={[0,-Math.PI/4,0]}/>
-     
+      
+        <Perf position={'bottom-left'}/>
+       <Auto />
+
+
        </Canvas>
-   
+   </>
    
   )
 }

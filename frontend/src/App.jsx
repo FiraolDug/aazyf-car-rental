@@ -1,5 +1,5 @@
 
-import './App.css'
+import './css/App.css'
 import NavBar from './component/NavBar'
 
 import { Routes, Route,useLocation} from 'react-router-dom'
@@ -16,6 +16,10 @@ import View from './component/View'
 import Cart from './pages/Cart'
 import { ToastContainer } from 'react-toastify';
 import Verify from './component/Verify'
+import Order from './pages/Order'
+import Chatbot from './component/Chatbot'
+import Notify from './pages/Notify'
+
 
 const App = () => {
   const url=useLocation()
@@ -24,8 +28,10 @@ const App = () => {
       <ToastContainer  />
     {
    url.pathname!=='/view'&&<NavBar/> 
-}
+}       
+   <Chatbot/>
     <SearchBar />
+ 
    <Routes>
     <Route path='/' element={<Home />}/>
     <Route path='/explore' element={<Explore />}/>
@@ -38,8 +44,10 @@ const App = () => {
     <Route path='/view' element={<View />}/>
     <Route path='/cart' element={<Cart/>} />
     <Route path='/verify' element={<Verify/>} />
+    <Route path='/order' element={<Order/>}/>
+    <Route path='/notify' element={<Notify/>}/>
     </Routes>
-   
+
     </>
   )
 }

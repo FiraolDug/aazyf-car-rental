@@ -1,0 +1,211 @@
+.rentDiv{
+display:flex;
+height:100%;
+
+
+}
+.infoDiv{
+    position:relative;
+    background-color: white;
+    height:100vh;
+    width:60%;
+    padding:30px;
+    
+}
+.paymentDiv{
+    position:relative;
+    background-color: #e6e6e7;
+    height:100vh;
+    width:40%;
+    padding:30px;
+}
+.paragraph1{
+    position:absolute;
+   left:400px;
+   top: 93px;
+}
+.paragraph2{
+    position:absolute;
+    left:400px;
+    top: 150px;
+}
+.paragraph3{
+    position:absolute;
+    left:400px;
+    top: 220px;
+}
+.paragraph{
+    font-size:24px;
+}
+.rentInfo{
+    display:flex;
+    flex-direction:column;
+    margin-left:50px;
+    background:transparent;
+    z-index:500;
+    border-radius:10px;
+ 
+ 
+    width:600px;
+  
+  
+}
+.phoneAge{
+    display:flex;
+}
+.commonDiv{
+    margin-top:10px;
+    font-size:18px;
+}
+.nameDiv{
+    display:flex;
+    
+}
+.lastNameDiv{
+    margin-left:20px;
+}
+.commonInput{
+    width:200px;
+    height:30px;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid rgb(167, 167, 248);
+    padding-left:15px;
+}
+.commonInput:focus{
+    border:3px solid rgb(123, 123, 252);
+}
+.emailInput{
+    width:435px;
+}
+.streetInput{
+    width:435px;
+}
+
+
+.zipDiv{
+    margin-left:20px;
+}
+
+
+.driverInput{
+border:none;
+}
+.submitBtn{
+    width:200px;
+    height:50px;
+    color:white;
+    background-color: black;
+    margin-left:140px;
+    margin-top:20px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.paymentMethodDiv{
+    display:flex;
+    padding:20px;
+ 
+    
+}
+.stripeDiv{
+    width:140px;
+    height:30px;
+    border:1px solid;
+    padding:30px;
+    border-radius: 5px;
+    cursor:pointer;
+    background-color: white;
+}
+.chapaDiv{
+    width:140px;
+    height:30px;
+    padding:30px;
+    margin-left:40px;
+    border:1px solid;
+    border-radius: 5px;
+    cursor:pointer;
+    background-color: white;
+}
+.chapaImg{
+    width:100px;
+}
+.stripeImg{
+    width:100px;
+}
+
+.chapaDiv:hover{
+    border: #7cbf48 3px solid;
+
+}
+.chapaActive{
+    border: #7cbf48 3px solid;
+     width:140px;
+    height:30px;
+    padding:30px;
+    margin-left:40px;
+    
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.stripeDiv:hover{
+    border:#8b84f1 3px solid;
+}
+.stripeActive{
+     width:140px;
+    height:30px;
+    padding:30px;
+    border-radius: 5px;
+    background-color: white;
+    border: #8b84f1 3px solid;
+}
+@media (max-width:700px){
+  .rentDiv{
+          display:block;
+    }
+    .paymentDiv{
+        width:100%;
+    
+        padding-left:10px;
+       
+      
+   
+    }
+    .infoDiv{
+        width:100%;
+      
+     
+    }
+    .rentInfo{
+        margin-left:-10px;
+    }
+    
+
+}
+@media (min-width:700px) and (max-width:1000px){
+    .rentDiv{
+          display:block;
+    }
+    .paymentDiv{
+        width:100%;
+     
+         padding-left:200px;
+      
+   
+    }
+    .infoDiv{
+        width:100%;
+      
+        padding-left:200px;
+    
+    }
+
+}
+@media (min-width:1000px) and (max-width:1311px){
+    
+    .infoDiv{
+       
+        width:50%;        
+    }
+}

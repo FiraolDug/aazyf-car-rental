@@ -20,7 +20,7 @@ const SideBar = ({setToken}) => {
           
         </div>
         </NavLink>
-        <NavLink className='navlink' to='/report' >
+        <NavLink className='navlink' to='/' >
         <div className='dashboard'>
             <img className='dashboardImg' src={icons.report}/>
             <p className='dashboardTxt'>Report</p>
@@ -36,21 +36,7 @@ const SideBar = ({setToken}) => {
         </div>
         </NavLink>
 
-        <NavLink className='navlink' to='/order' >
-        <div className='dashboard'>
-            <img className='dashboardImg' src={icons.order}/>
-            <p className='dashboardTxt'>Orders</p>
-          
-        </div>
-        </NavLink>
 
-        <NavLink className='navlink' to='/issue' >
-        <div className='dashboard'>
-            <img className='dashboardImg' src={icons.issue}/>
-            <p className='dashboardTxt'>Issues</p>
-          
-        </div>
-        </NavLink>
 
          </nav>
     

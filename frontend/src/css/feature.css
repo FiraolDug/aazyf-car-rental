@@ -1,0 +1,320 @@
+
+.detailDiv{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+   
+   
+    position:absolute;
+    top:750px;
+    left:100px;
+    border-radius: 25px;
+    width:1200px;
+    height:600px;
+    gap:260px 500px;
+    
+   
+   
+
+}
+.commonItem{
+    width:400px;
+    min-height:200px;
+    padding:10px;
+    background-color:white;
+    border-radius: 10px;
+    transition:transform 0.3s ease-in-out;
+}
+.commonItem:hover{
+    background-color:rgb(119, 118, 118);
+    transform:scale(1.01);
+}
+.commonItem:hover h4{
+    color:white;
+}
+.commonItem:hover p{
+    color:white;
+}
+.commonItem h4{
+    font-size:18px;
+}
+.commonItem p{
+    margin-top:-10px;
+    font-size:18px;
+    padding-top:1px;
+    color:rgb(169, 168, 168);
+}
+.viewType{
+    text-align:right;
+}
+.allDiv{
+    text-align:right;
+}
+
+.threeImg{
+
+    width:50px;
+    height:50px;
+}
+
+.chatbotView{
+    border-radius: 7px;
+   
+   background-color:white;
+
+    width:500px;
+    height:150px;
+    
+    opacity:0.9;
+    padding:20px;
+    padding-top:1px;
+    margin-top:5px;
+    box-shadow:0px 8px 40px 0px rgba(0, 0, 0, 0.15);
+    z-index:1;
+}
+.chatbotView:hover{
+    box-shadow:0px 8px 20px 0px #aaf6a6;
+    border-style:solid;
+    border-color: #aaf6a6;
+    transform:translateX(20px);
+   
+   
+}
+.chatbotView p{
+    font-size:18px;
+    padding-top:10px;
+    color:#b5b3af;
+}
+.backgroundDiv{
+    display:flex;
+    position:absolute;
+    padding-top:30px;
+    padding-left:50px;
+    top:240vh;
+    left:50px;
+    width:85%;
+    height:550px;
+   
+ 
+    border:white;
+}
+.chatbotModel{
+    margin-left:200px;
+    width:600px;
+}
+.service{
+    position:absolute;
+    top:340vh; 
+}
+.serviceDiv{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    
+    padding-left:40px;
+    padding-top:80px;
+  
+}
+.serviceImg{
+    width:160px;
+    height:160px;
+}
+.serviceTxt{
+    padding-left:40px;
+}
+.serviceItem{
+    padding:30px;
+    
+    width:80%;
+    height:300px;
+    background-color:white;
+    border-radius:10px;
+    box-shadow:0px 8px 40px 0px rgba(0, 0, 0, 0.15);
+    z-index:1;
+}
+.serviceItem:hover{
+    cursor:pointer;
+    box-shadow:0px 8px 20px 0px #aaf6a6;
+    border-style:solid;
+    border-color: #aaf6a6;
+    transform:translateY(-10px);
+
+}
+@media screen and (max-width:500px){
+      .detailDiv{
+        width:440px;
+        display:grid;
+        grid-template-columns:repeat(1,1fr);
+        gap:10px;
+        position:absolute;
+        left:10px;
+      
+    }
+    .commonItem{
+        width:440px;
+        height:200px;
+    }
+.backgroundDiv{
+    margin-top:100px;
+   margin-left:-40px;
+    width:85%;
+    height:450px;
+   
+}
+.chatbotView{
+   
+    width:350px;
+    height:100px;
+}
+.chatbotModel{
+   display:none;
+    
+}
+.service{
+    position:absolute;
+    top:360vh; 
+}
+.serviceDiv{
+
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+   
+  
+}
+.serviceItem{
+    width:80%;
+    height:200px;
+
+}
+.serviceImg{
+    width:80px;
+    height:80px;
+}
+}
+@media screen and (min-width:510px) and (max-width:1000px){
+    .detailDiv{
+        width:700px;
+        display:grid;
+        gap:0px 0.6px;
+       
+
+        position:absolute;
+        left:10px;
+     
+    }
+    .commonItem{
+        width:250px;
+         height:50px;
+    }
+    .backgroundDiv{
+   margin-left:-40px;
+    width:90%;
+    height:550px;
+   
+}
+.chatbotView{
+   
+    width:450px;
+    height:140px;
+}
+.chatbotModel{
+   display:none;
+    
+}
+.service{
+    position:absolute;
+    top:350vh; 
+}
+.serviceDiv{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+   
+  
+}
+.serviceItem{
+    width:70%;
+    height:240px;
+
+}
+.serviceImg{
+    height:100px;
+    width:100px;
+}
+}
+
+@media screen and (min-width:1010px) and   (max-width:1090px){
+      .detailDiv{
+        width:800px;
+        display:grid;
+        gap:200px 340px;
+       
+
+        position:absolute;
+        left:10px;
+     
+    }
+    .commonItem{
+        width:300px;
+         height:60px;
+    }
+    
+  .backgroundDiv{
+   margin-left:-40px;
+    width:90%;
+    height:550px;
+   
+}
+.chatbotView{
+   
+    width:450px;
+    height:140px;
+}
+.chatbotModel{
+   margin-left:-1px;
+    width:500px;
+    
+}
+
+}
+@media screen and (min-width:1100px) and (max-width:1320px){
+       .detailDiv{
+        width:1000px;
+        display:grid;
+        gap:220px 400px;
+       
+
+        position:absolute;
+        left:17px;
+     
+    }
+    .commonItem{
+        width:340px;
+         height:60px;
+    }
+    .backgroundDiv{
+   
+    width:90%;
+    height:550px;
+   
+}
+.chatbotView{
+   
+    width:450px;
+    height:140px;
+}
+.chatbotModel{
+   margin-left:-1px;
+    width:500px;
+    
+}
+.serviceItem{
+    width:80%;
+}
+}
+
+
+
+
+

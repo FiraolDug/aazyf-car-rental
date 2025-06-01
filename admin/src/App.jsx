@@ -25,7 +25,7 @@ const App = () => {
 <Routes>
         <Route path='/inventory' element={<Inventory token={token}/>}  />
         <Route path='/dashboard' element={<DashBoard token={token}/>} />
-        <Route path='/report' element={<Report token={token}/> } />
+        <Route path='/' element={<Report token={token}/> } />
       </Routes>
 </>
       }

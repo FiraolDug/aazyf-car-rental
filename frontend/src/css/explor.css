@@ -1,0 +1,185 @@
+.explorDiv{
+ 
+    display:flex;
+    flex-direction:row;
+    padding-top:10px;
+    width:95%;
+    gap:1;
+    padding:20px;
+}
+.filterBox{
+    width:250px;
+    background-color:  #fec1ae;
+   padding:10px;
+   margin-top:70px;
+   height:470px;
+
+}
+.titleText{
+    font-size:20px;
+    margin-top:2px;
+    display:flex;
+    cursor: pointer;
+    align-items:center;
+    gap:2;
+}
+.category{
+    border:1px solid rgb(201, 200, 200);
+    margin-top:6px;
+    padding-left:5px;
+    padding-top:3px;
+    margin-left:20px;
+    width:200px;
+    margin-bottom:10px;
+}
+.categoryTxt{
+    font:medium;
+    font-size:18px;
+    margin-bottom:3px;
+}
+.categoryDiv{
+    display:flex;
+    flex-direction:column;
+    font:light;
+    color:rgb(93, 91, 91);
+    gap:2;
+}
+
+.categoryText{
+    display:flex;
+    gap:2;
+    
+
+}
+.type{
+    width:200px;
+    margin-left:20px;
+    margin-top:20px;
+    padding-left:5px;
+    padding-top:3px;
+    border:1px rgb(201, 200, 200) solid;
+    margin-bottom:10px;
+}
+.typeDiv{
+    display:flex;
+    flex-direction:column;
+    font:light;
+    color:rgb(93, 91, 91);
+    gap:2;
+}
+.contentDiv{
+    flex:1;
+}
+.sortDiv{
+   display:flex;
+   justify-content: space-between;
+     margin-bottom: 4px;
+   margin-left: 81%;
+   margin-top:10px; 
+}
+.sort{
+    border:2px solid  #6f76f9;
+    padding-left:5px;
+    padding-right:16px;
+    height:50px;
+    width:200px;
+    font-size:16px;
+    background-color: #d0cfcf;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+  
+}
+.carDiv{
+    position:relative;
+    width:95%;
+    padding-top:15px;
+    padding-left:34px;
+    display:grid;
+   grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    height:100%;
+  
+    
+}
+
+@media (min-width:0px) and  (max-width:670px){
+   
+    .carDiv{
+
+        width:90%;
+        display:grid;
+        gap:10px;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .sortDiv{
+
+        display:nones;
+        margin-left:10%;
+
+    }
+.filterBox{
+   width:400px;
+   margin-top:1px;
+   height:270px;
+
+}
+.categoryDiv{
+    display:flex;
+    flex-direction:row;
+    color:rgb(93, 91, 91);
+     gap:10px;
+}
+.typeDiv{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+
+.carDiv{
+    margin-top:10px;
+    margin-left:-370px;
+}
+ .sortDiv{
+        display:block;
+        margin-left:-100px;
+        margin-top:350px;
+    }
+    .type{
+        margin-top:-10px;
+    }
+    .categoryText{
+        margin-top:px;
+    }
+
+}
+
+@media (min-width:680px) and (max-width:1000px){
+      .explorDiv{
+        width:95%;
+    }
+    .carDiv{
+        width:95%;
+        display:grid;
+        gap:10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sortDiv{
+        display:block;
+        margin-left:50%;
+    }
+}
+@media (min-width:1010px) and (max-width:1311px){
+    .explorDiv{
+        width:95%;
+    }
+    .carDiv{
+        width:95%;
+        gap:5px;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+    .sortDiv{
+        margin-left:77%;
+    }
+}

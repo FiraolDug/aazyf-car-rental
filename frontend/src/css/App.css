@@ -1,0 +1,30 @@
+
+html, body {
+  
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+}
+.homeDiv{
+
+  background-color: rgba(88, 86, 86, 0.942);
+  width:100%;
+  height:100%;
+}
+.car1 {
+
+  background-color: rgb(97, 98, 96);
+  height: 100%;
+  width: 100%;
+
+}
+
+canvas {
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}

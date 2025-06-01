@@ -1,0 +1,28 @@
+.orderDiv{
+   background-color: rgb(255, 255, 255);
+   margin:50px 100px;
+   padding:100px;
+   border-radius: 10px;
+    box-shadow:0px 0px 10px rgb(54, 54, 54);
+}
+.orderContent{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top:30px;
+
+}
+.orderImg{
+    width:160px;
+}
+.orderBtn{
+    width:160px;
+    height:60px;
+    border-radius: 10px;
+    background-color: black;
+    border:1px white solid;
+    color:white;
+    cursor: pointer;
+}
+.orderBtnDiv{
+    margin-left:100px;
+}
