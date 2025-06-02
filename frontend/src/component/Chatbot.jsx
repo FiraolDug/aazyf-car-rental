@@ -4,6 +4,7 @@ import '../css/chatbot.css'
 import axios from 'axios'
 import { Context } from '../context/context'
 import { toast } from 'react-toastify'
+
 const Chatbot = () => {
   const {backendUrl}=useContext(Context)
   const [popup,setPopup]=useState(false)
@@ -20,12 +21,7 @@ const Chatbot = () => {
   const onSubmitHandler=async (event)=>{
     event.preventDefault()
     sendMessage()
-    if(event.key==='Enter' && message.trim()){
-      addMessage({role:'user',content:message})
-      setMessage('')
-
-      event.preventDefault()
-    }
+   
 
     
   
@@ -102,7 +98,7 @@ const Chatbot = () => {
             </div>
         ) : (
             <div key={index} className="userDiv">
-                <p className="userTxt">{content}</p>
+                <p  className="userTxt">{content}</p>
             </div>
         )
     ))}
