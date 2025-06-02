@@ -10,8 +10,6 @@ import Footer from "../component/Footer";
 const Order = () => {
     const {backendUrl,token,currency,orderData,setOrderData}=useContext(Context);
   
-    
-  
     const loadOrderData=useCallback( async ()=>{
       try{
         if(!token){
@@ -31,9 +29,6 @@ const Order = () => {
           item['payment']=order.payment
           item['paymentMethod']=order.paymentMethod
           item['date']=order.date
-          
-
-          
           allOrdersItem.push(item)
         }) 
         } 
