@@ -9,7 +9,9 @@ const currency='usd'
 const payWithStripe= async (req,res)=>{
 
     try{
-        const {userId,items,amount,address}=req.body
+        const userId = req.userId;
+        const {items,amount,address}=req.body
+        console.log(userId)
         const {origin}=req.headers
         const orderData={
             userId,
@@ -43,7 +45,7 @@ const payWithStripe= async (req,res)=>{
             mode:'payment',
             
         })
-         res.json({success:true,session_url:session.url})
+        res.json({success:true,session_url:session.url})
     }   
   
     catch(error){
@@ -55,7 +57,8 @@ const payWithStripe= async (req,res)=>{
 
 const payWithChapa = async (req, res) => {
   try {
-    const { userId, items, amount, address } = req.body;
+     const userId = req.userId;
+    const {  items, amount, address } = req.body;
    const { origin } = req.headers;
 
 
@@ -158,7 +161,8 @@ const verifyChapa = async (req, res) => {
   }
 };
 const verifyStripe=async (req,res)=>{
-    const {orderId,success,userId}=req.body
+    const {orderId,success}=req.body
+    const userId=req.userId
     try{
         if(success==='true'){
             await  paymentModel.findByIdAndUpdate(orderId,{payment:true})
@@ -179,7 +183,7 @@ const verifyStripe=async (req,res)=>{
 }
 const userOrders=async (req,res)=>{
     try{
-        const {userId}=req.body
+        const userId=req.userId
         const orders=await paymentModel.find({userId})
         res.json({sucess:true,orders})
 

@@ -2,7 +2,7 @@ import reservationModel from "../models/reservationModel.js"
 
 const setReservation=async(req,res)=>{
     try{
-        const {userId}=req.body
+        const userId=req.userId
         const {pickupLocation,pickupDate,pickupTime,dropoffDate,dropoffTime}=req.body
         const date=new Date()
         const reservationData={
@@ -26,7 +26,7 @@ const setReservation=async(req,res)=>{
 }
 const getReservation=async(req,res)=>{
     try{
-        const {userId}=req.body
+        const userId=req.userId
         const reservation=await reservationModel.find({userId})
         if(reservation.length>0){
             res.json({sucess:true,reservation})
