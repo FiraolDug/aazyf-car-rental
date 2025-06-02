@@ -23,33 +23,31 @@ const Notify = () => {
             })
         
                 setReservationData(allReservationItem.reverse())
-               
-              
-               
+    
             }
             else{
                 console.log(response.data.message)
                 toast.error(response.data.message)
-              
+            
             }
 
         }
         catch(error){
             console.log(error)
         }
-       
+    
     },[backendUrl,token])
-     useEffect(()=>{
+    useEffect(()=>{
             fetchReservation()
         },[fetchReservation])
-  return (
+return (
     <>
     <div className='notifyDiv'>
-         <h3 className='notifyTitle'>Reservation Details</h3>
+        <h3 className='notifyTitle'>Reservation Details</h3>
         {
             reservationData.map((item,index)=>(
                 <div key={index} className='notifyContent'>
-                   
+                
                     <p className='notifyText'>Pickup Location: {item.pickupLocation}</p>
                     <p className='notifyText'>Pickup Date: {item.pickupDate}</p>
                     <p className='notifyText'>Pickup Time: {item.pickupTime}</p>
@@ -59,12 +57,12 @@ const Notify = () => {
 
             ))
         }
-      
+    
     </div>
     
     <Footer />
     </>
-  )
+)
 }
 
 export default Notify

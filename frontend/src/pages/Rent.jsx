@@ -62,11 +62,11 @@ const Rent = () => {
         {
           const responseStripe=await axios.post(backendUrl+'/api/payment/stripe',orderData,{headers:{token}})
           if(responseStripe.data.success){
-              const {session_url}=responseStripe.data
-             window.location.replace(session_url)}
-           else{
-             toast.error(responseStripe.data.message)
-           }
+            const {session_url}=responseStripe.data
+            window.location.replace(session_url)}
+          else{
+            toast.error(responseStripe.data.message)
+              }
 
           break
         }
@@ -173,8 +173,8 @@ const Rent = () => {
         </div>
         </div>
         </form>
-       <Footer/>
-       </>
+      <Footer/>
+      </>
   )
 }
 

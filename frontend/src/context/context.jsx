@@ -29,7 +29,7 @@ const ContextProvider = (props) => {
     if(cartCopy[itemId])
     {
       cartCopy[itemId]+=1
-     
+    
     }
     else{
     
@@ -51,7 +51,7 @@ const ContextProvider = (props) => {
       toast.error(error.message)
     }
   }
-   
+  
 
   }
 
@@ -98,9 +98,9 @@ const ContextProvider = (props) => {
       totalCount+=cartItems[item]
       }
     }
-     catch(error){
+    catch(error){
       console.log(error)
-     }
+    }
     }
     return totalCount
   }
@@ -143,7 +143,7 @@ const ContextProvider = (props) => {
   useEffect(()=>{
     getCars()
   },[getCars])
-   
+  
   useEffect(()=>{
     if(token){
     getUserCart()
@@ -177,7 +177,7 @@ const ContextProvider = (props) => {
         setToken,
         orderData,
         setOrderData
- 
+
 
     }
 

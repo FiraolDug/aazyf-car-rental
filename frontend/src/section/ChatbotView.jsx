@@ -15,7 +15,7 @@ const ChatbotView = () => {
         action1.play()
         action2.play()
    
-    },[])
+    },[animation.actions.KeyAction,animation.actions.animation1])
 
   return (
 

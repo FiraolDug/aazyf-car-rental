@@ -6,10 +6,10 @@ import { useState } from 'react'
 
 export const Context=new createContext()
 const ContextProvider = (props) => {
-
-         const [allOrders,setAllOrders]=useState([])
-         const [list,setLists]=useState([])
-         const [reserve,setReserve]=useState([])
+        const backend=import.meta.env.VITE_BACKEND_URL
+        const [allOrders,setAllOrders]=useState([])
+        const [list,setLists]=useState([])
+        const [reserve,setReserve]=useState([])
 
     const value={
         allOrders,
@@ -17,9 +17,9 @@ const ContextProvider = (props) => {
         list,
         setLists,
         reserve,
-        setReserve
+        setReserve,
+        backend
 
-     
 
     }
 

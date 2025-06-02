@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, {  useContext, useEffect} from 'react'
 import { toast } from 'react-toastify'
-import { backend } from '../App'
+
 import '../css/list.css'
 import { Context } from '../context/context'
+import { useCallback } from 'react'
 const List = () => {
-    const {list,setLists}=useContext(Context)
-    const fetchData=async ()=>{
+    const {list,setLists,backend}=useContext(Context)
+    const fetchData=useCallback(async ()=>{
         try{    
             const response=await axios.get(backend+'/api/car/list')
             if(response.data.sucess){
@@ -22,7 +23,7 @@ const List = () => {
             console.log(error)
             toast.error(error.message)
         }
-    }
+    },[setLists,backend])
 
     const removeItem=async(id)=>{
         try{
@@ -37,13 +38,13 @@ const List = () => {
 
         }
         catch(error){
-           toast.error(error.message)
+        toast.error(error.message)
         }
     }
     useEffect(()=>{
         fetchData()
 
-    },[])
+    },[fetchData])
   return (
     <div className='listDiv'>
         <p className='listTxt'>Uploaded Products</p>
@@ -54,9 +55,9 @@ const List = () => {
             <b className='detailTxt'>LicencePlate</b>
             <b className='detailTxt'>Price</b>
             <b className='detailTxt'>remove</b>
-       </div>
+        </div>
 
-       {
+    {
         list.map((item,index)=>(
             <div className='detailDiv' key={index}>
                 <img className='imgArea' src={item.image[0]}/>
@@ -66,10 +67,10 @@ const List = () => {
                 <p className='removeBtn' onClick={()=>removeItem(item._id)}>X</p>
             </div>
         ))
-       }
-      
+    }
+    
     </div>
-  )
+)
 }
 
 export default List

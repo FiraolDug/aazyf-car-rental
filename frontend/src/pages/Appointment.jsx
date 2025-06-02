@@ -47,7 +47,7 @@ const Appointment = () => {
   return (
     <>
     <form onSubmit={onSubmitHandler}>
-     
+  
       <div className='appointDiv'>
         <img className='rentImg' src={icon.backgroundImg} />
       <div className='formDiv'>
@@ -56,7 +56,7 @@ const Appointment = () => {
 
 
         <div className='dateTime'>
-          <div>
+        <div>
         <p className='appointParagraph'>pick-up Date</p>
         <input  onChange={(event)=>setPickupDate(event.target.value)}  className='pickupDate' value={pickupDate} type='date' placeholder='20/2/2025' required/>
         </div>

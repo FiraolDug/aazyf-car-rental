@@ -44,17 +44,17 @@ const Login = () => {
 
     }
     catch(error){
-     toast.error(error.message)
+    toast.error(error.message)
     }
   }
   useEffect(()=>{
     if(token){
- 
+
       navigate('/')
 
 
     }
-   
+  
     
   
   },[token,navigate])
@@ -77,7 +77,7 @@ const Login = () => {
         <div className='txtDiv'>
           {currentUserState==='Login' ?
           <p>Forget Password?</p>: <p>Already Have Account?</p>}
-       
+      
         {
           currentUserState==='Sign Up' ? <p onClick={()=>setCurrentUserState('Login')} className='txtparagraph'>Login Here</p>: <p onClick={()=>setCurrentUserState('Sign Up')} className='txtparagraph'>Create an Account</p>
         }

@@ -18,10 +18,10 @@ const Footer = () => {
           <Link className='linkTxt' to='/' >
           <p>Home</p>
           </Link>
-           <Link className='linkTxt' to='/login' >
+          <Link className='linkTxt' to='/login' >
           <p>Register</p>
           </Link>
-           <Link className='linkTxt' to='/about' >
+          <Link className='linkTxt' to='/about' >
           <p>About</p>
           </Link>
         </div>
@@ -31,14 +31,14 @@ const Footer = () => {
           <ul >
             <li className ='contact'>+25960558207</li>
             <li className='contact'>abellegend4321@gmail.com</li>
-           </ul>
+          </ul>
             
         </div>
         <div className='copyDiv'>
             <hr />
             <p className='copyTxt'>Copyright 2025 car rental- All rights reserved</p>
-         </div>
-       </div>
+        </div>
+      </div>
     </div>
   )
 }

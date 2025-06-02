@@ -7,9 +7,9 @@ import { useLocation } from 'react-router-dom'
 
 const SearchBar = () => {
   const {search,setSearch}=useContext(Context)
- const location=useLocation();
- const [visible,setVisible]=useState(false)
- useEffect(()=>{
+  const location=useLocation();
+  const [visible,setVisible]=useState(false)
+  useEffect(()=>{
 if(location.pathname.includes('/explore')){
 setVisible(true)
 }
@@ -17,7 +17,7 @@ else{
     setVisible(false)
 
 }
- },[location])
+},[location])
   return visible? (
     <div className='searchDiv'>
       <div className='searchBar'>

@@ -24,7 +24,7 @@ const View = () => {
   return (
     <>
     <div className='guideDiv'>
-     <img onClick={change} className='dropImg' src={icon.drop} /> 
+    <img onClick={change} className='dropImg' src={icon.drop} /> 
     <h2 className='guideTxt'> Guide</h2>
     </div>
     {
@@ -47,17 +47,17 @@ const View = () => {
     </div>:null
 }
       <Leva  />
-     
+    
       
       <Canvas className='canvas'>
       
         <Perf position={'bottom-left'}/>
-       <Auto />
+      <Auto />
 
 
-       </Canvas>
-   </>
-   
+      </Canvas>
+  </>
+  
   )
 }
 

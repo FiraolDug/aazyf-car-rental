@@ -40,10 +40,10 @@ const Cart = () => {
       {
         cartData.map((item,index)=>{
           const productCopy=cars.find((product)=>product._id===item._id);
-         
+      
           return (
     
-     <div key={index} className='cartElement'>
+    <div key={index} className='cartElement'>
     
       <img   className='cartImage' src={productCopy.image[0]} />
       <div onClick={()=>removeCart(item._id,0)} className='closeDiv'>
@@ -58,13 +58,13 @@ const Cart = () => {
           )
 })}
           </div>
-         
+        
           <h2 className='cartTxt2'>Cart Total:{currency}{<CartTotal data={cartData} />}</h2>
           <Link to='/rent'>
           <button className='rentBtn'>Rent Now</button>
           </Link>
-     </div>
-   
+    </div>
+  
     </div>
     <Footer />
     </>

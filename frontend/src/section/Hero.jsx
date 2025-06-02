@@ -45,15 +45,15 @@ const Hero = () => {
   return (
     <div className='heroDiv'>
       <div className='content'>
-     <h2 className='heroHeading firstHead'>Make Your Dream True  </h2>
-       <h2 className='heroHeading secondHead'>Rent car Today</h2>
-     <p  className='heroTxt'>Browse 30+ luxury, sport, and affordable rentals. Fast booking, great support! </p>
+    <h2 className='heroHeading firstHead'>Make Your Dream True  </h2>
+    <h2 className='heroHeading secondHead'>Rent car Today</h2>
+    <p  className='heroTxt'>Browse 30+ luxury, sport, and affordable rentals. Fast booking, great support! </p>
     <Link to='/login'>
-     <button className='heroButton start'>Get Started</button>
-     </Link>
-     <Link to='./explore'>
-     <button className='heroButton explore'>Explore</button>
-     </Link>
+    <button className='heroButton start'>Get Started</button>
+    </Link>
+    <Link to='./explore'>
+    <button className='heroButton explore'>Explore</button>
+    </Link>
   
       </div>
       <div className='carView'>

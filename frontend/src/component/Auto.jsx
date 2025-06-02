@@ -6,21 +6,21 @@ import { Context } from '../context/context'
 import {button, useControls} from 'leva'
 import '../css/view.css'
 const Auto = () => {
- 
+
   const {control}=useThree()
   const {productItem}=useContext(Context)
- 
+
   const [isAnimating,setIsAnimating]=useState(true)
   const load=useGLTF(productItem.gltfFile[0])
   const click=()=>{
     console.log('hello')
   }
   const {intensity}=useControls({
-   
+  
       intensity:{value:5,min:0,max:10,step:0.01},
       interact:button(()=>{
-         setIsAnimating(false)
-         control.camera.position.set(0,0,0)
+        setIsAnimating(false)
+        control.camera.position.set(0,0,0)
       
       }),
       auto:button(()=>{
@@ -40,14 +40,14 @@ const Auto = () => {
   })
   return (
     <>
-       <OrbitControls  />
+      <OrbitControls  />
         <PerspectiveCamera makeDefault position={[0,3,6]}  />
         <ambientLight intensity={intensity} />
         <directionalLight intensity={10}/>
-         
- 
+        
+
           <primitive  object={load.scene} position={[0,-1,0]}  scale={170} rotation={[0,-Math.PI/4,0]} onClick={click}/>
-       
+      
     </>
   )
 }

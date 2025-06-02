@@ -9,21 +9,21 @@ const Product = () => {
 
   const [img,setImg]=useState([])
   const {carID}=useParams()
- 
+
 
 const fetchData=useCallback( async ()=>{
   cars.map((item)=>{
     if(item._id==carID){
-     
+    
       setProductItem(item)
-   
+  
       setImg(item.image[0])
       return null
     }
   })
   cars1.map((item)=>{
     if(item._id==carID){
-     
+    
       setUpload(item)
     
       setImg(item.image[0])
@@ -43,25 +43,25 @@ const fetchData=useCallback( async ()=>{
     <div className='productDiv'>
 
       <div className='options'>
-         <div className='cartDiv'>
+        <div className='cartDiv'>
         <h1 className='model'>{productItem.model}</h1>
           <h3 className='price'>{currency}{productItem.price}</h3>
           <p>{productItem.description}</p>
-     
-       
+    
+      
             <button onClick={()=>addToCart(productItem._id)} className='cartBtn'>Add to Cart</button>
-       
+      
       
           </div>
-             <div className='threeView'> 
-        <h3>change View</h3>
-        <Link to='/view'>
-          <div className='divImg'>
-          <img className='viewImg' src={icon.view}/>
-          </div>
-         
-         </Link>
-       </div>
+            <div className='threeView'> 
+            <h3>change View</h3>
+            <Link to='/view'>
+            <div className='divImg'>
+            <img className='viewImg' src={icon.view}/>
+            </div>
+        
+        </Link>
+      </div>
       
       
       </div>
@@ -71,10 +71,10 @@ const fetchData=useCallback( async ()=>{
         <img className='productImg' src={img} alt='here is the image' />
       </div>
           
-     
+    
 
 
- 
+
 
     </div>
     <Footer />

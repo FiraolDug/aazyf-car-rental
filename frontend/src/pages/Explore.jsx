@@ -16,14 +16,14 @@ const Explore = () => {
 
   const toggleCatagory=(event)=>{
   
-   if(category.includes(event.target.value)){
+  if(category.includes(event.target.value)){
     setCategory((prev)=>prev.filter((item)=>item!==event.target.value))
-   }
-   else{
+  }
+  else{
     setCategory((prev)=>[...prev,event.target.value])
 
-   }
-   
+  }
+  
   }
 
 
@@ -37,27 +37,27 @@ const Explore = () => {
     }
 
   }
- 
+
 
 
 
   const applyFilter=useCallback(()=>{
-   let car=cars.slice()
-   if(search){
+  let car=cars.slice()
+  if(search){
 
 
     car=car.filter((item)=>item.model.toLowerCase().includes(search.toLowerCase()))}
 
 
 
-   if(category.length>0){
-   car=car.filter((item)=>category.includes(item.type))
-   }
-   if(subCategory.length>0){
+  if(category.length>0){
+  car=car.filter((item)=>category.includes(item.type))
+  }
+  if(subCategory.length>0){
     car=car.filter((item)=>subCategory.includes(item.subType))
-   }
-   setFilter(car)
-   
+  }
+  setFilter(car)
+  
   },[cars,category,subCategory,search])
 
   const applySort=useCallback(()=>{
@@ -65,12 +65,12 @@ const Explore = () => {
     switch(sort){
       case 'low-high':
       // Sorting cars by ascending price
-       setFilter(car.sort((a,b)=>a.price-b.price))
+      setFilter(car.sort((a,b)=>a.price-b.price))
         break
       case 'high-low':
          // Sorting cars by descending price
-         setFilter(car.sort((a,b)=>b.price-a.price))
-         break
+        setFilter(car.sort((a,b)=>b.price-a.price))
+        break
       default:
         // Apply default filter if no sorting is selected
         applyFilter()
@@ -85,7 +85,7 @@ useEffect(()=>{
 applySort()
 },[applySort])
 useEffect(()=>{
-   applyFilter()
+  applyFilter()
 },[applyFilter])
 
   return (
@@ -96,7 +96,7 @@ useEffect(()=>{
       <div className='category'>
         <p className='categoryTxt'>Category</p>
         <div className='categoryDiv'>
-             <p className='categoryText'>
+            <p className='categoryText'>
             <input name='type'  onChange={toggleCatagory} type='checkbox'   value={'suv'}/>
             Suv</p>
             <p className='categoryText'>

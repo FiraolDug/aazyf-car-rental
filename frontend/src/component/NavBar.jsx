@@ -6,32 +6,32 @@ import { NavLink, Link } from 'react-router-dom';
 import {useContext, useState} from 'react'
 import { Context } from '../context/context';
 const NavBar = () => {
- const [visible,setVisible]=useState(false)
- const {getCount,token,setToken,navigate,setCartItems}=useContext(Context)
+const [visible,setVisible]=useState(false)
+const {getCount,token,setToken,navigate,setCartItems}=useContext(Context)
 
- const logout=()=>{
+const logout=()=>{
     navigate('/login')
     localStorage.removeItem('token')
     setToken('')
     setCartItems({})
 
- }
- 
+}
+
   return (  
     <>    
     <div className='navbar'>
-     <Link to='/'>
+    <Link to='/'>
       <img className='logo'  src={icon.logo}/>
       </Link>
       <ul className='list'>
       <NavLink className='navlink' to='/'>
       <p>HOME</p>
       <hr className='line' />
-     </NavLink>
+    </NavLink>
       <NavLink className='navlink' to='/explore'>
       <p>EXPLORE</p>
       <hr className='line'/>
-     </NavLink>
+    </NavLink>
       <NavLink className='navlink' to='/rent'>
       <p>RENT</p>
       <hr className='line'/>
@@ -64,11 +64,11 @@ const NavBar = () => {
       <div className='profileDiv'>
   <img onClick={()=>{token?null:navigate('/login')}}  className='user' src={icon.user}/>
 
-     
+    
       
   
       {    
-       token &&
+      token &&
       <div className='profileMenu'>
         <div className='profileItems'>
       <p onClick={()=>navigate('/order')} className='itemTxt'>Orders</p>
@@ -81,21 +81,21 @@ const NavBar = () => {
       </div>
 
     
- 
+
       
       
-     <img className='menuImg' onClick={()=>{setVisible(true)}} src={icon.menu}/>
+    <img className='menuImg' onClick={()=>{setVisible(true)}} src={icon.menu}/>
       
-     
+    
       </div>
       
-   
+  
     </div>
 
     { visible===true ?
-         <div className='mobileDiv'>
-         <img className='menuImg'   onClick={()=>{setVisible(false)}} src={icon.back} />
-         
+        <div className='mobileDiv'>
+        <img className='menuImg'   onClick={()=>{setVisible(false)}} src={icon.back} />
+        
         <Link onClick={()=>{
           setVisible(false)
         }} className='mobileHeading' to='/'>
@@ -120,7 +120,7 @@ const NavBar = () => {
           setVisible(false)
         }} className='mobileHeading' to='/about'>
         <h1 >About</h1></Link>
-         
+        
         <Link  onClick={()=>{
           setVisible(false)
         }} className='mobileHeading' to='/contact'>

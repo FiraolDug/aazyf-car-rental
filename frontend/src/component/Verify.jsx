@@ -23,7 +23,7 @@ const verifyPayment=useCallback( async ()=>{
         const response=await axios.post(backendUrl+'/api/payment/verify',{orderId,success},{headers:{token}})
 
         if(response.data.success){
-         
+        
             setCartItems({})
             navigate('/order')
         }
@@ -32,10 +32,10 @@ const verifyPayment=useCallback( async ()=>{
         }
     }
     else{
-           const response=await axios.post(backendUrl+'/api/payment/verify-chapa',{orderId,success,tx_ref},{headers:{token}})
+        const response=await axios.post(backendUrl+'/api/payment/verify-chapa',{orderId,success,tx_ref},{headers:{token}})
 
         if(response.data.success){
-         
+        
             setCartItems({})
             navigate('/order')
         }
@@ -48,15 +48,15 @@ const verifyPayment=useCallback( async ()=>{
         toast.error(error.message)
     }
 
- },[backendUrl,token,orderId,success,navigate,setCartItems,tx_ref])
- useEffect(()=>{
+},[backendUrl,token,orderId,success,navigate,setCartItems,tx_ref])
+useEffect(()=>{
     verifyPayment()
- },[verifyPayment])
+},[verifyPayment])
     return (
     <div>
-      
+    
     </div>
-  )
+)
 }
 
 export default Verify

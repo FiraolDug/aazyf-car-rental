@@ -1,11 +1,11 @@
-import  { useState } from 'react'
+import  { useState,useContext } from 'react'
 import '../css/login.css'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-import {backend} from '../App'
+import { Context } from '../context/context'
 const Login = ({setToken}) => {
-    console.log(backend)
 
+     const {backend}=useContext(Context)
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const submitHandler=async (event)=>{
@@ -23,7 +23,7 @@ const Login = ({setToken}) => {
         console.log(error)
         toast.error(error.message)
     }}
-  return (
+return (
 
     <div>
         <div className='loginDiv'>
@@ -36,7 +36,7 @@ const Login = ({setToken}) => {
             </form>
         </div>
     </div>
-  )
+)
 }
 
 export default Login

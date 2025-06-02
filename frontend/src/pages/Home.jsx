@@ -12,7 +12,7 @@ const Home = () => {
       <Feature />
       
     </div>
-   <HomeFooter />
+  <HomeFooter />
     </>
   )
 }

@@ -20,7 +20,7 @@ const Chatbot = () => {
   const onSubmitHandler=async (event)=>{
     event.preventDefault()
     sendMessage()
-     if(event.key==='Enter' && message.trim()){
+    if(event.key==='Enter' && message.trim()){
       addMessage({role:'user',content:message})
       setMessage('')
 
@@ -28,7 +28,7 @@ const Chatbot = () => {
     }
 
     
-   
+  
     try{
 
       const response=await axios.post(backendUrl+'/api/chatbot/respond',{chatMessage,message})
@@ -37,7 +37,7 @@ const Chatbot = () => {
       const responseData=response.data.result
   
       addMessage({content:responseData,role:'assistant'})
-   
+  
       }
       else{
         toast.error(response.data.message)
@@ -94,7 +94,7 @@ const Chatbot = () => {
         </div>
         
         <div className="chatBody">
-    {chatMessage.map(({ role, content }, index) => (
+        {chatMessage.map(({ role, content }, index) => (
         role === 'assistant' ? (
             <div key={index} className="chatDiv">
                 <img className="chatImg" src={icon.chatbot} alt="Assistant" />

@@ -8,10 +8,10 @@ const HeroCar1 = () => {
   const load=useGLTF(icon.glb.file2)
 
   return (
-   
+
       <Canvas className='canvasView'>
 
-     
+  
         <PerspectiveCamera makeDefault position={[0,3,6]} />
         <ambientLight intensity={5} />
         <directionalLight intensity={2} />

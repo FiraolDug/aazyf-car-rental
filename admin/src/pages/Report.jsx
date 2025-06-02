@@ -1,4 +1,4 @@
-import React from 'react'
+
 import List from '../components/List'
 import Orders from '../components/Orders'
 import '../css/report.css'
