@@ -76,7 +76,7 @@ const Login = () => {
         <input onChange={(e)=>setPassword(e.target.value)} value={password} type='password' placeholder='Enter your Password' required/>
         <div className='txtDiv'>
           {currentUserState==='Login' ?
-          <p>Forget Password?</p>: <p>Already Have Account?</p>}
+          <p>?</p>: <p>Already Have Account?</p>}
       
         {
           currentUserState==='Sign Up' ? <p onClick={()=>setCurrentUserState('Login')} className='txtparagraph'>Login Here</p>: <p onClick={()=>setCurrentUserState('Sign Up')} className='txtparagraph'>Create an Account</p>
