@@ -1,7 +1,7 @@
 import '../css/explor.css'
 import { useContext,useState,useEffect, useCallback } from 'react'
 import {Context} from '../context/context'
-import CarItem from '../component/carItem.jsx'
+import CarItem from '../component/CarItem.jsx'
 import Footer from '../component/Footer.jsx'
 const Explore = () => {
 

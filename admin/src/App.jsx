@@ -3,7 +3,7 @@ import SideBar from './components/SideBar'
 import Login from './pages/Login.jsx'
 import {Routes,Route} from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
-import Inventory from './pages/inventory.jsx'
+import Inventory from './pages/Inventory.jsx'
 import DashBoard from './pages/DashBoard.jsx';
 import Report from './pages/Report.jsx';
 
